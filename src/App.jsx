@@ -1,0 +1,40 @@
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import SocialMedia from './components/SocialMedia';
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <section style={{
+        textAlign: "center",
+        margin: "2rem auto",
+        maxWidth: 700,
+        background: "#fff",
+        borderRadius: "12px",
+        boxShadow: "0 2px 8px rgba(100,108,255,0.08)",
+        padding: "2rem"
+      }}>
+        <h1 style={{ color: "#646cff", fontWeight: 700, fontSize: "2rem", marginBottom: "1rem" }}>Welcome to MindWell</h1>
+        <p style={{ fontSize: "1.1rem", color: "#555" }}>
+          MindWell is your trusted partner on the journey to mental wellness. Explore our services, connect with our team, and discover resources to help you thrive.
+        </p>
+      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <SocialMedia />
+    </>
+  );
+}
+
+
+
+
+
+
